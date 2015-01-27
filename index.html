@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Memory Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h1>Memory Game</h1>
+            <p>Test your memory and your ability to remember</p>
+        </header>
+
+        <h3 id="filltheinput">Welcome to Memory Game .. Please fill the input below then push start to play the game</h3>
+
+        <form id="reg">
+            <label>your name : </label><input type="text" value="Your Name" id="username"><br>
+            <label>Categroy : </label>
+            <select id="cat">
+                <option value="Character">Character</option>
+                <option value="Number">Number</option>
+                <option value="Symbols">Symbols</option>
+            </select><br>
+            <label>Level : </label>
+            <select id="level">
+                <option value="Easy">Easy</option>
+                <option value="Hard">Hard</option>
+            </select><br>
+        </form>
+
+        <h2 id="welcome"></h2>
+
+        <input type="button" value="Start" id="start" onclick="initial_array(document.getElementById('cat').value, document.getElementById('level').value);
+                newBoard();
+                startButton();">
+        <input type="button" value="ReSet The Board" id="reset" style="display: none" onclick="newBoard();">
+        <input type="button" value="ReStart" id="restart" style="display: none" onclick=" location.reload()">
+        <div id="counters">
+            <div id="counter" style="color: #fff; font-weight: bold;"></div> || 
+            <div id="timer" style="color: #fff; font-weight: bold;"></div>
+        </div>
+        <div id="memory_board"></div>
+
+
+        <footer>
+            <p>CopyRight reserved for any one like the game :) | Hosam.Zewain@gmail.com</p>
+        </footer>
+        <script src="js/memory.js"></script>
+
+    </body>
+</html>
